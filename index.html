@@ -189,11 +189,13 @@
                     <button id="btn-metrics" class="nav-btn" onclick="showTab('metrics')">Metrics</button>
                     <button id="btn-rpr" class="nav-btn" onclick="showTab('rpr')">RPR Insights</button>
                     <button id="btn-option1" class="nav-btn" onclick="showTab('option1')">Roadmap</button>
+                    <button id="btn-campaign" class="nav-btn" onclick="showTab('campaign')">Campaign Strategy</button>
                     <button id="btn-rates" class="nav-btn" onclick="showTab('rates')">Rates</button>
                     <button id="btn-liquidity" class="nav-btn" onclick="showTab('liquidity')">Liquidity</button>
                     <button id="btn-options" class="nav-btn" onclick="showTab('options')">Incentives</button>
                     <button id="btn-option3" class="nav-btn" onclick="showTab('option3')">Financing</button>
                     <button id="btn-option2" class="nav-btn" onclick="showTab('option2')">Buydown</button>
+                    <button id="btn-documents" class="nav-btn" onclick="showTab('documents')">Documents</button>
                     <button id="btn-search" class="nav-btn" onclick="window.open('https://www.texasgrandrealty.com/', '_blank')">Search Properties</button>
                 </div>
             </nav>
@@ -402,16 +404,22 @@
                         <p class="text-slate-500 font-medium italic">Comprehensive asset overview and verified modernization details.</p>
                     </div>
 
-                    <!-- Hero Image Slot -->
-                    <div class="mb-12 max-w-5xl mx-auto">
-                        <div class="relative w-full rounded-xl overflow-hidden shadow-xl" style="height: 450px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; position: relative;">
-                            <!-- Fallback Text Overlay -->
-                            <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-400 z-0">
-                                <div class="text-6xl mb-4 opacity-20">🖼️</div>
-                                <span class="text-sm font-black uppercase tracking-[0.3em] text-center px-6">128 N Osborn Gateway - Photo Pending</span>
+                    <div class="mb-12 max-w-7xl mx-auto">
+                        <div class="flex flex-col lg:flex-row gap-6">
+                            <!-- Left: Hero Image -->
+                            <div class="w-full lg:w-1/2 relative rounded-[2rem] overflow-hidden shadow-2xl bg-slate-100 border border-slate-200" style="height: 450px;">
+                                <!-- Fallback Text Overlay -->
+                                <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-400 z-0">
+                                    <div class="text-6xl mb-4 opacity-20">🖼️</div>
+                                    <span class="text-sm font-black uppercase tracking-[0.3em] text-center px-6">128 N Osborn Gateway - 2025 Renovation</span>
+                                </div>
+                                <img src="property-hero.jpg" alt="128 N Osborn" style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 10; display: none;" onload="this.style.display='block'; this.parentElement.style.background='none'; this.parentElement.querySelector('div').style.display='none';">
                             </div>
-                            <!-- Actual Hero Image -->
-                            <img src='property-hero.jpg' alt='128 N Osborn' style='width: 100%; height: 100%; object-fit: cover; position: relative; z-10; display: none;' onload='this.style.display="block"; this.parentElement.style.background="none"; this.parentElement.querySelector("div").style.display="none"'>
+                            
+                            <!-- Right: Google Map -->
+                            <div class="w-full lg:w-1/2 relative rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200" style="height: 450px;">
+                                <iframe width='100%' height='100%' style='border:0;' loading='lazy' allowfullscreen referrerpolicy='no-referrer-when-downgrade' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.875323451234!2d-95.485123!3d32.792123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864906f5c5555555%3A0x5555555555555555!2s128%20N%20Osborn%2C%20Alba%2C%20TX%2075410!5e0!3m2!1sen!2sus!4v1705445000000!5m2!1sen!2sus'></iframe>
+                            </div>
                         </div>
                     </div>
 
@@ -459,13 +467,6 @@
                         </div>
                     </div>
 
-                    <!-- Interactive Map Slot -->
-                    <div class="mb-16 max-w-5xl mx-auto">
-                        <h3 class="text-xs font-black text-blue-900 uppercase tracking-[0.3em] mb-8 text-center font-montserrat">Location & Proximity</h3>
-                        <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-                            <iframe width='100%' height='400' style='border:0; border-radius:12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);' loading='lazy' allowfullscreen referrerpolicy='no-referrer-when-downgrade' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.875323451234!2d-95.485123!3d32.792123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864906f5c5555555%3A0x5555555555555555!2s128%20N%20Osborn%2C%20Alba%2C%20TX%2075410!5e0!3m2!1sen!2sus!4v1705445000000!5m2!1sen!2sus'></iframe>
-                        </div>
-                    </div>
 
                     <!-- Modernization Highlight -->
                     <div class="page-section bg-slate-900 text-white shadow-2xl relative overflow-hidden border-b-8 border-blue-600 mb-12">
@@ -515,7 +516,7 @@
                                 </div>
                                 <!-- Aspect Ratio Container -->
                                 <div class="relative w-full overflow-hidden rounded-[1.5rem]" style="aspect-ratio: 16 / 9;">
-                                    <iframe width='100%' height='100%' src='https://my.matterport.com/show/?m=YOUR_ID_HERE' frameborder='0' allowfullscreen allow='xr-spatial-tracking' class="absolute top-0 left-0 w-full h-full"></iframe>
+                                    <iframe width='100%' height='100%' src='https://my.matterport.com/show/?m=39D57z4RA75&play=1&mls=1' frameborder='0' allowfullscreen allow='xr-spatial-tracking' class="absolute top-0 left-0 w-full h-full"></iframe>
                                 </div>
                             </div>
                             <!-- CTA Caption -->
@@ -533,8 +534,8 @@
                     
                     <!-- Global RPR Link -->
                     <div class="flex justify-center mb-8">
-                        <a href="https://www.narrpr.com/reports-v2/3301b700-8b0c-4530-b17b-bb435cf9abb8/pdf" target="_blank" class="flex items-center justify-center px-8 py-4 bg-blue-600 border border-blue-700 rounded-xl text-white font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/25 active:translate-y-1">
-                            <span class="mr-2">📄</span> View Source Data: RPR Market Evidence
+                        <a href="https://www.narrpr.com/reports-v2/3301b700-8b0c-4530-b17b-bb435cf9abb8/pdf" target="_blank" class="flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-black uppercase tracking-widest rounded-xl hover:bg-blue-700 transition-all shadow-lg active:translate-y-1">
+                            <span class="mr-2">📄</span> View RPR Market Evidence
                         </a>
                     </div>
 
@@ -784,10 +785,10 @@
 
                     <!-- External Links -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <a href="https://www.mortgagenewsdaily.com/" target="_blank" class="flex items-center justify-center p-5 bg-blue-600 text-white rounded-xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg border-b-4 border-blue-800 active:border-b-0 active:translate-y-1">
+                        <a href="https://www.mortgagenewsdaily.com/" target="_blank" class="flex items-center justify-center p-5 bg-blue-600 text-white rounded-xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg active:translate-y-1">
                             View Mortgage News Daily Analysis
                         </a>
-                        <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" class="flex items-center justify-center p-5 bg-slate-800 text-white rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 transition-all shadow-lg border-b-4 border-slate-950 active:border-b-0 active:translate-y-1">
+                        <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" class="flex items-center justify-center p-5 bg-slate-800 text-white rounded-xl font-black uppercase tracking-widest hover:bg-slate-900 transition-all shadow-lg active:translate-y-1">
                             CME FedWatch Tool
                         </a>
                     </div>
@@ -1156,106 +1157,94 @@
             </div>
 
             <div id="tab-campaign" class="tab-pane hidden">
-                <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="max-w-7xl mx-auto px-4 py-12">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tight mb-4 font-montserrat">Campaign Strategy & Execution</h2>
+                        <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tight mb-4 font-montserrat">2026 Campaign Strategy & Execution</h2>
                         <p class="text-slate-500 font-medium italic text-lg">"Transforming 128 N Osborn from a listing into a high-velocity digital asset."</p>
                     </div>
 
-                    <!-- Professional Media Tier: Action Cards -->
-                    <div class="mb-20">
-                        <h3 class="text-xs font-black text-blue-900 uppercase tracking-[0.3em] mb-8 text-center font-montserrat">Executive Media Suite</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <!-- 3D Immersion -->
-                            <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
-                                <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                                <div class="relative z-10">
-                                    <div class="text-5xl mb-6">🏠</div>
-                                    <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">3D Immersion</h4>
-                                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                        Matterport virtual walkthrough technology capturing 100% of the asset for 24/7 global access.
-                                    </p>
-                                    <div style='background: #111; aspect-ratio: 16/9; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #666;' class="mb-6">
-                                        <i class='fas fa-cube' style='font-size: 3rem; margin-bottom: 1rem;'></i>
-                                        <p class="font-black uppercase tracking-widest text-[10px]">3D VIRTUAL TOUR LOADING...</p>
-                                    </div>
-                                    <a href="https://my.matterport.com/show/?m=YOUR_ID_HERE" target="_blank" class="inline-block px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest hover:bg-blue-700 transition-all">View 3D Showcase</a>
-                                </div>
-                            </div>
-
-                            <!-- Aerial Intel -->
-                            <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
-                                <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                                <div class="relative z-10">
-                                    <div class="text-5xl mb-6">🚁</div>
-                                    <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">Aerial Intel</h4>
-                                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                        High-altitude drone videography highlighting the 0.48 AC lot and proximity to Lake Fork.
-                                    </p>
-                                    <a href="#" target="_blank" class="inline-block px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest hover:bg-blue-700 transition-all">Watch Drone Video</a>
-                                </div>
-                            </div>
-
-                            <!-- HDR Mastery -->
-                            <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
-                                <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                                <div class="relative z-10">
-                                    <div class="text-5xl mb-6">📸</div>
-                                    <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">HDR Mastery</h4>
-                                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                                        Professional High Dynamic Range photography to showcase the 2025 modernization in perfection.
-                                    </p>
-                                    <a href="#" target="_blank" class="inline-block px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest hover:bg-blue-700 transition-all">View HDR Gallery</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Video Marketing Link -->
-                        <div class="mt-8 text-center">
-                            <a href="#" target="_blank" class="text-blue-600 font-black uppercase text-xs tracking-widest hover:text-blue-800 transition-colors">
-                                🎬 View TGR Video Marketing Compilation
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- The Syndication Power-House -->
-                    <div class="bg-white rounded-3xl border border-slate-200 p-12 mb-16 shadow-sm text-center">
-                        <h3 class="section-header mx-auto">Global Distribution Network</h3>
-                        <div class="section-underline mx-auto"></div>
-                        <p class="text-xl font-bold text-slate-700 max-w-3xl mx-auto leading-relaxed mb-8">
-                            Your property is syndicated to over <span class="text-blue-600 font-black">900+ real estate portals worldwide</span>, including Zillow, Realtor.com, Trulia, and Redfin.
-                        </p>
-                        <p class="text-sm text-slate-500 font-medium italic">
-                            * Assets are also pushed to <strong class="text-slate-800">Property Panorama</strong> to create a custom, high-engagement virtual tour experience for every syndication channel.
-                        </p>
-                    </div>
-
-                    <!-- Social Media Acceleration -->
-                    <div class="bg-blue-50 rounded-3xl border border-blue-100 p-12 mb-16 relative overflow-hidden">
-                        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-blue-200/30 rounded-full"></div>
-                        <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
-                            <div class="md:w-1/3 text-center md:text-left">
-                                <div class="inline-block p-4 bg-blue-600 text-white rounded-2xl shadow-xl mb-6">🚀</div>
-                                <h3 class="text-2xl font-black text-slate-900 uppercase font-montserrat mb-2">Social Acceleration</h3>
-                                <p class="text-blue-600 font-black text-xs uppercase tracking-widest">Paid Placement Engine</p>
-                            </div>
-                            <div class="md:w-2/3">
-                                <p class="text-slate-700 text-lg font-medium leading-relaxed mb-6">
-                                    We deploy high-intensity <strong class="text-slate-900">Social Media Paid Promotion</strong> and <strong class="text-slate-900">Listing Rocket</strong> campaigns on Facebook and Instagram, specifically engineered to trigger buyer engagement.
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 1. 3D Immersion -->
+                        <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-6">🏠</div>
+                                <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">3D Immersion</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Matterport virtual walkthrough technology capturing 100% of the asset for 24/7 global access.
                                 </p>
-                                <div class="flex flex-wrap gap-4">
-                                    <a href="#" target="_blank" class="px-4 py-2 bg-white border border-blue-200 rounded-xl text-xs font-black text-blue-600 uppercase tracking-widest hover:bg-blue-50 transition-all">
-                                        Live Facebook/IG Reel Example
-                                    </a>
-                                    <a href="#" target="_blank" class="px-4 py-2 bg-white border border-blue-200 rounded-xl text-xs font-black text-blue-600 uppercase tracking-widest hover:bg-blue-50 transition-all">
-                                        Sample YouTube Short
-                                    </a>
-                                </div>
+                                <a href="https://my.matterport.com/show/?m=39D57z4RA75" target="_blank" class="inline-block px-8 py-3 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View 3D Tour</a>
+                            </div>
+                        </div>
+
+                        <!-- 2. Aerial Intel -->
+                        <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-6">🚁</div>
+                                <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">Aerial Intel</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    High-altitude drone videography highlighting the 0.48 AC lot and proximity to Lake Fork.
+                                </p>
+                                <a href="https://drive.google.com/file/d/103RUPsc2FisX0nT_Ow9dRfEp10_YMuUq/view?usp=sharing" target="_blank" class="inline-block px-8 py-3 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Drone Video</a>
+                            </div>
+                        </div>
+
+                        <!-- 3. HDR Mastery -->
+                        <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-6">📸</div>
+                                <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">HDR Mastery</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Professional High Dynamic Range photography to showcase the 2025 modernization in perfection.
+                                </p>
+                                <a href="https://drive.google.com/file/d/1wVAiKQyh_OKK4RccwIYvG9Rm2DhnQe-u/view" target="_blank" class="inline-block px-8 py-3 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View HDR Gallery</a>
+                            </div>
+                        </div>
+
+                        <!-- 4. Video Marketing -->
+                        <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-6">🎬</div>
+                                <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">Video Marketing</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Cinematic property tours and social-ready highlights for maximum engagement.
+                                </p>
+                                <a href="https://youtu.be/fj_mo819gi0" target="_blank" class="inline-block px-8 py-3 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Video Tour</a>
+                            </div>
+                        </div>
+
+                        <!-- 5. Distribution Network -->
+                        <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-6">🌐</div>
+                                <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">Distribution Network</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    Your property is syndicated to over 900+ real estate portals worldwide including Zillow and Realtor.com.
+                                </p>
+                                <button onclick="openSyndicationModal()" class="inline-block px-8 py-3 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Distribution</button>
+                            </div>
+                        </div>
+
+                        <!-- 6. Social Acceleration -->
+                        <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 text-center relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-6">🚀</div>
+                                <h4 class="text-xl font-black text-white uppercase mb-3 font-montserrat">Social Acceleration</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    High-intensity Social Media Paid Promotion and Listing Rocket campaigns on FB and IG.
+                                </p>
+                                <a href="https://www.facebook.com/share/v/16sQ7Z1QMk/" target="_blank" class="inline-block px-8 py-3 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Social Campaign</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Transparency Dashboard: Live Reporting -->
-                    <div class="bg-slate-900 text-white rounded-[3rem] p-12 shadow-3xl relative overflow-hidden">
+                    <div class="bg-slate-900 text-white rounded-[3rem] p-12 shadow-3xl relative overflow-hidden mt-12">
                         <div class="absolute -left-10 -bottom-10 w-48 h-48 bg-blue-600/10 rounded-full"></div>
                         <div class="relative z-10 text-center">
                             <h3 class="text-3xl font-black uppercase mb-6 font-montserrat">Transparency Reporting</h3>
@@ -1265,24 +1254,18 @@
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
                                 <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col items-center">
-                                    <span class="text-blue-400 font-black uppercase text-[10px] tracking-[0.2em] mb-4">Traffic Performance</span>
+                                    <span class="text-blue-400 font-black uppercase text-[10px] tracking-[0.2em] mb-4 font-montserrat">Traffic Performance</span>
                                     <div class="flex gap-4">
-                                        <a href="https://www.zillow.com/agent-resources/traffic-report-sample.pdf" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-700 transition-all">Sample Zillow Report</a>
-                                        <a href="https://www.realtor.com/agent-resources/traffic-report-sample.pdf" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-700 transition-all">Sample Realtor.com Report</a>
+                                        <a href="https://www.zillow.com/agent-resources/traffic-report-sample.pdf" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-700 transition-all font-montserrat">View Zillow Report</a>
+                                        <a href="https://www.realtor.com/agent-resources/traffic-report-sample.pdf" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-700 transition-all font-montserrat">View Realtor.com Report</a>
                                     </div>
                                 </div>
                                 <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col items-center">
-                                    <span class="text-blue-400 font-black uppercase text-[10px] tracking-[0.2em] mb-4">Campaign Intelligence</span>
-                                    <a href="#" target="_blank" class="px-8 py-3 border-2 border-slate-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-700 transition-all">
-                                        View Executive Summary Example
+                                    <span class="text-blue-400 font-black uppercase text-[10px] tracking-[0.2em] mb-4 font-montserrat">Campaign Intelligence</span>
+                                    <a href="#" target="_blank" class="px-8 py-3 border-2 border-slate-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-700 transition-all font-montserrat">
+                                        View Executive Summary
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="flex justify-center">
-                                <a href="#" class="py-4 px-10 border border-slate-700 text-slate-500 rounded-xl font-black uppercase tracking-widest hover:text-white transition-all cursor-not-allowed">
-                                    View Live Showing Feedback
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -1382,6 +1365,73 @@
                         </table>
                     </div>
 
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-documents" class="tab-pane hidden">
+                <div class="max-w-7xl mx-auto px-4 py-12">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tight mb-4 font-montserrat">Document Vault</h2>
+                        <p class="text-slate-500 font-medium italic text-lg">"Verified legal disclosures and listing agreements for 128 N Osborn."</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 1. Listing Agreement -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                            <div class="text-5xl mb-6">📝</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Listing Agreement</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Official representation and marketing authorization documents.</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
+
+                        <!-- 2. IABS -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                            <div class="text-5xl mb-6">ℹ️</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">IABS Disclosure</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Information About Brokerage Services (Texas Real Estate Commission).</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
+
+                        <!-- 3. Seller Disclosure -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                            <div class="text-5xl mb-6">🏠</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Seller Disclosure</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Comprehensive property history and system modernization report.</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
+
+                        <!-- 4. Lead-Based Paint -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                            <div class="text-5xl mb-6">🎨</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Lead-Based Paint</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Standard disclosure for properties constructed before 1978.</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
+
+                        <!-- 5. Mandatory HOA -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                            <div class="text-5xl mb-6">👥</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Mandatory HOA</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Information regarding community standards and HOA requirements.</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
+
+                        <!-- 6. Third Party Financing -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                            <div class="text-5xl mb-6">🏦</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Third Party Financing</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Addendum for third party financing and lending requirements.</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
+
+                        <!-- 7. On-Site Sewer Notice -->
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl lg:col-start-2">
+                            <div class="text-5xl mb-6">🚽</div>
+                            <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">On-Site Sewer</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-8">Notice regarding septic system and on-site sewer facility.</p>
+                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1571,7 +1621,7 @@
                                 <div class="text-4xl mb-4">📄</div>
                                 <h4 class="text-lg font-black text-slate-800 uppercase mb-2">Full RPR Analysis</h4>
                                 <p class="text-slate-500 text-sm mb-6">Access the complete property report, including historical tax records and detailed neighborhood mapping.</p>
-                                <a href="https://www.narrpr.com/reports-v2/3301b700-8b0c-4530-b17b-bb435cf9abb8/pdf" target="_blank" class="block w-full py-5 bg-slate-900 text-white rounded-xl font-black uppercase tracking-widest hover:bg-slate-800 transition-all shadow-xl border-b-4 border-slate-950 active:border-b-0 active:translate-y-1">
+                                <a href="https://www.narrpr.com/reports-v2/3301b700-8b0c-4530-b17b-bb435cf9abb8/pdf" target="_blank" class="block w-full py-5 bg-blue-600 text-white rounded-xl font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-xl active:translate-y-1">
                                     View Full RPR Market Report
                                 </a>
                             </div>
@@ -1607,7 +1657,7 @@
 
         <footer class="text-center py-12 border-t border-slate-200 text-slate-500 text-[12px] font-medium leading-relaxed">
             <div class="max-w-4xl mx-auto px-4">
-                Data sourced from RPR, Wood County CAD, and surrounding MLS systems. Analysis provided by Thomas Miller, Broker, Texas Grand Realty, TX Brk. Lic. No. 696139, AZ Brk. Lic. No. BR604504, Lender, Peoples Mortgage, NMLS ID: 2360948.
+                Data sourced from RPR, Wood County CAD, and surrounding MLS systems. Thomas Miller, Broker, Texas Grand Realty TX Brk. Lic. No. 696139, AZ Brk. Lic. No. BR604504, Lender, Peoples Mortgage, NMLS ID: 2360948.
             </div>
         </footer>
     </div>
@@ -1792,6 +1842,22 @@
             if(tabId === 'local') initLocalMarketChart();
             if(tabId === 'liquidity') initCDOMChart();
             if(tabId === 'rates') initMarketChart();
+            if(tabId === 'campaign') {
+                console.log('Campaign tab activated');
+            }
+            if(tabId === 'documents') {
+                console.log('Documents vault accessed');
+            }
+        }
+
+        function openSyndicationModal() {
+            document.getElementById('syndication-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSyndicationModal() {
+            document.getElementById('syndication-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
 
         function showSubTab(parentTabId, subTabId) {
@@ -1946,5 +2012,44 @@
             });
         }
     </script>
+    <!-- Syndication Modal -->
+    <div id="syndication-modal" class="fixed inset-0 z-[200] hidden">
+        <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm" onclick="closeSyndicationModal()"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl p-4">
+            <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden">
+                <div class="bg-blue-600 p-8 text-white flex justify-between items-center">
+                    <div>
+                        <h3 class="text-2xl font-black uppercase tracking-tight">Global Distribution Network</h3>
+                        <p class="text-blue-100 text-xs font-bold uppercase tracking-widest mt-1">900+ Search Portals & International Sites</p>
+                    </div>
+                    <button onclick="closeSyndicationModal()" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="p-12">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-70 grayscale">
+                        <!-- Standard Logos -->
+                        <div class="flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Zillow_logo.svg/1280px-Zillow_logo.svg.png" alt="Zillow" class="h-8 object-contain"></div>
+                        <div class="flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Realtor.com_logo.svg/2560px-Realtor.com_logo.svg.png" alt="Realtor.com" class="h-6 object-contain"></div>
+                        <div class="flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Trulia_Logo.svg/2560px-Trulia_Logo.svg.png" alt="Trulia" class="h-6 object-contain"></div>
+                        <div class="flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Redfin_logo.svg/2560px-Redfin_logo.svg.png" alt="Redfin" class="h-6 object-contain"></div>
+                        <div class="flex items-center justify-center"><img src="https://logos-world.net/wp-content/uploads/2021/08/Homes-logo.png" alt="Homes.com" class="h-8 object-contain"></div>
+                        <div class="flex items-center justify-center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Apartments.com_logo.svg/1200px-Apartments.com_logo.svg.png" alt="Apartments.com" class="h-6 object-contain"></div>
+                        <div class="flex items-center justify-center font-black text-slate-400 text-xl tracking-tighter">COLDWELL BANKER</div>
+                        <div class="flex items-center justify-center font-black text-slate-400 text-xl tracking-tighter">RE/MAX</div>
+                        <div class="flex items-center justify-center font-black text-slate-400 text-xl tracking-tighter">KW</div>
+                        <div class="flex items-center justify-center font-black text-slate-400 text-xl tracking-tighter">SOTHEBY'S</div>
+                        <div class="flex items-center justify-center font-black text-slate-400 text-xl tracking-tighter">CENTURY 21</div>
+                        <div class="flex items-center justify-center font-black text-slate-400 text-xl tracking-tighter">EXP REALTY</div>
+                    </div>
+                    
+                    <div class="mt-16 bg-blue-50 border border-blue-100 p-8 rounded-2xl text-center">
+                        <p class="text-blue-900 font-bold mb-4">"Your property doesn't just sit on the MLS. We push your listing data to every major real estate portal in the world to ensure maximum buyer exposure."</p>
+                        <button onclick="closeSyndicationModal()" class="px-8 py-3 bg-blue-600 text-white font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">Close Distribution View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
