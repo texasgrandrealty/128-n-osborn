@@ -59,8 +59,10 @@
             beds: 3,
             baths: 2,
             sqft: 1700,
-            lotSize: "0.48 AC",
-            yearBuilt: "1974 / 2025 Total Remodel",
+            lotSize: "0.502 AC (21,854 SqFt)",
+            yearBuilt: "1985-92 / 2025 Total Remodel",
+            taxID: "R40517",
+            legalDescription: "LOT PT 7 BLK 15 .5017 LOW 1ST ADDN",
             imagePath: "./front-view.jpg",
             assetName: "Osborn Gateway Residence",
             pps: 205.88,
@@ -154,7 +156,7 @@
                 <div class="flex flex-wrap items-center gap-6 md:gap-10 border-l-0 xl:border-l xl:pl-10 border-slate-200">
                     <div class="flex flex-col">
                         <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Year</span>
-                        <span id="header-year" class="text-sm font-bold text-slate-800">1985/2025</span>
+                        <span id="header-year" class="text-sm font-bold text-slate-800">1985-92 / 2025</span>
                     </div>
                     <div class="w-px h-8 bg-slate-100 hidden md:block"></div>
                     <div class="flex flex-col">
@@ -174,7 +176,7 @@
                     <div class="w-px h-8 bg-slate-100 hidden md:block"></div>
                     <div class="flex flex-col">
                         <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Lot</span>
-                        <span id="header-lot" class="text-sm font-bold text-slate-800">0.50 AC</span>
+                        <span id="header-lot" class="text-sm font-bold text-slate-800">0.50 AC (Verified)</span>
                     </div>
                 </div>
             </div>
@@ -350,7 +352,7 @@
                         <div class="flex items-center gap-6">
                             <div class="text-3xl">🖋️</div>
                             <p class="text-lg font-medium leading-relaxed italic">
-                                "This roadmap respects the $350k target while mathematically securing an appraisal-supported closing in the $315k range."
+                                "This analysis reconciles the 1985 historical MLS records with the 1992 tax baseline, while prioritizing the verified 2025 total systems overhaul. By positioning the asset at the $350k entry point, we are capturing the scarcity of turn-key modern inventory in the Lake Fork corridor while maintaining a strategic $309k floor to guarantee liquidity."
                             </p>
                         </div>
                     </div>
@@ -431,7 +433,7 @@
                         </div>
                         <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm text-center flex flex-col justify-center items-center transition-all hover:border-blue-500 hover:shadow-md">
                             <span class="text-[10px] font-black text-blue-900 uppercase tracking-[0.2em] mb-3">Lot Size</span>
-                            <span class="text-4xl font-black text-slate-900 font-montserrat tracking-tighter">0.48 AC</span>
+                            <span class="text-4xl font-black text-slate-900 font-montserrat tracking-tighter">0.502 AC</span>
                         </div>
                         <div class="bg-blue-900 p-8 rounded-2xl shadow-xl text-center flex flex-col justify-center items-center relative overflow-hidden ring-4 ring-blue-500/20">
                             <div class="absolute inset-0 bg-blue-600/5"></div>
@@ -443,7 +445,14 @@
                     <!-- The Spec Grid: Secondary Data Block -->
                     <div class="border border-slate-200 rounded-3xl p-8 bg-white shadow-sm mb-12">
                         <h3 class="text-xs font-black text-blue-900 uppercase tracking-[0.3em] mb-8 text-center font-montserrat">Core Asset Data Matrix</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- Year Built Card -->
+                            <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex flex-col items-center text-center">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-900 text-xl mb-4">📅</div>
+                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-1">Year Built</span>
+                                <span class="text-xs font-black text-blue-900 uppercase font-montserrat">1985 (MLS) / 1992 (Tax)</span>
+                            </div>
+
                             <!-- School District Card -->
                             <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex flex-col items-center text-center">
                                 <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-900 text-xl mb-4">🎓</div>
@@ -455,14 +464,14 @@
                             <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex flex-col items-center text-center">
                                 <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-900 text-xl mb-4">⚡</div>
                                 <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-1">Essential Utilities</span>
-                                <span class="text-xs font-black text-blue-900 uppercase font-montserrat leading-tight">City Water / Septic / Fiber</span>
+                                <span class="text-xs font-black text-blue-900 uppercase font-montserrat leading-tight">City Water / Septic / Fiber / .502 AC Lot</span>
                             </div>
 
                             <!-- Tax ID Card -->
                             <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex flex-col items-center text-center">
                                 <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-900 text-xl mb-4">📋</div>
                                 <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-1">Tax Info</span>
-                                <span class="text-sm font-black text-blue-900 uppercase font-montserrat">[Wood County R#]</span>
+                                <span class="text-sm font-black text-blue-900 uppercase font-montserrat">PID: R40517</span>
                             </div>
                         </div>
                     </div>
@@ -775,9 +784,9 @@
                         <div class="flex flex-col md:flex-row items-center gap-8">
                             <div class="text-4xl">🏦</div>
                             <div>
-                                <h3 class="text-xl font-black text-slate-800 uppercase mb-2">Tax Advantage: Alba-Golden ISD</h3>
+                                <h3 class="text-xl font-black text-slate-800 uppercase mb-2">Tax Advantage: Wood County / Alba-Golden ISD</h3>
                                 <p class="text-slate-600 text-sm leading-relaxed">
-                                    Alba-Golden ISD Tax Rate: <strong class="text-blue-700">0.78</strong> - Saving <strong class="text-slate-900">~$400/mo</strong> vs Suburban MUD districts.
+                                    Verified Rates: <strong class="text-blue-700">Alba-Golden ISD (0.7842)</strong> + <strong class="text-blue-700">Wood County (0.4625)</strong>. Combined effective rate is roughly <strong class="text-slate-900">1.25%</strong>—a massive competitive advantage over Dallas-area MUDs (often 2.5% - 3%), translating to hundreds in monthly savings.
                                 </p>
                             </div>
                         </div>
@@ -1376,13 +1385,13 @@
                         <p class="text-slate-500 font-medium italic text-lg">"Verified legal disclosures and listing agreements for 128 N Osborn."</p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <!-- 1. Listing Agreement -->
                         <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
                             <div class="text-5xl mb-6">📝</div>
                             <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Listing Agreement</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-8">Official representation and marketing authorization documents.</p>
-                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                            <a href="https://drive.google.com/file/d/1dZtwPyMJZQe710hinNYpyWklS8S-ACPV/view?usp=drive_link" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
                         </div>
 
                         <!-- 2. IABS -->
@@ -1390,7 +1399,7 @@
                             <div class="text-5xl mb-6">ℹ️</div>
                             <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">IABS Disclosure</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-8">Information About Brokerage Services (Texas Real Estate Commission).</p>
-                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                            <a href="https://drive.google.com/file/d/1XdU80YRmcSd98VJbuRUL2tpaLfM18JNf/view?usp=drive_link" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
                         </div>
 
                         <!-- 3. Seller Disclosure -->
@@ -1398,7 +1407,7 @@
                             <div class="text-5xl mb-6">🏠</div>
                             <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Seller Disclosure</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-8">Comprehensive property history and system modernization report.</p>
-                            <a href="#" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
+                            <a href="https://drive.google.com/file/d/1NLDEMTwX2_-TDpUGX-XIOZhMloiRsIZ_/view?usp=drive_link" target="_blank" class="inline-block w-full py-4 bg-blue-600 text-white text-xs font-black rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all">View Document</a>
                         </div>
 
                         <!-- 4. Lead-Based Paint -->
@@ -1410,7 +1419,7 @@
                         </div>
 
                         <!-- 5. Mandatory HOA -->
-                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl lg:col-start-2">
                             <div class="text-5xl mb-6">👥</div>
                             <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">Mandatory HOA</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-8">Information regarding community standards and HOA requirements.</p>
@@ -1426,7 +1435,7 @@
                         </div>
 
                         <!-- 7. On-Site Sewer Notice -->
-                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl lg:col-start-2">
+                        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-slate-100 text-center relative overflow-hidden transition-all hover:border-blue-500 hover:shadow-2xl">
                             <div class="text-5xl mb-6">🚽</div>
                             <h4 class="text-xl font-black text-slate-900 uppercase mb-3 font-montserrat">On-Site Sewer</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-8">Notice regarding septic system and on-site sewer facility.</p>
